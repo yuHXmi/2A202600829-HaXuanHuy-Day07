@@ -1,7 +1,7 @@
 # Báo Cáo Lab 7: Embedding & Vector Store
 
 **Họ tên:** Hà Xuân Huy
-**Nhóm:** [Tên nhóm]
+**Nhóm:** UET
 **Ngày:** 05/06/2026
 
 ---
