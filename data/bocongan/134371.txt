@@ -1,0 +1,9 @@
+SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=134371
+TITLE: Văn bản ID 134371
+ITEM_ID: 134371
+STATUS: Còn hiệu lực
+EFFECTIVE_DATE: Quyết định 13/2019/QĐ-TTg
+SIGNED_DATE: N/A
+FILTER_YEAR: 2019
+==================================================
+

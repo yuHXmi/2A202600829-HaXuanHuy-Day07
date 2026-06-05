@@ -1,0 +1,9 @@
+SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=135512
+TITLE: Văn bản ID 135512
+ITEM_ID: 135512
+STATUS: Còn hiệu lực
+EFFECTIVE_DATE: Nghị định 49/2019/NĐ-CP
+SIGNED_DATE: N/A
+FILTER_YEAR: 2019
+==================================================
+

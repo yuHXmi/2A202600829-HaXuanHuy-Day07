@@ -1,0 +1,9 @@
+SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=133857
+TITLE: Văn bản ID 133857
+ITEM_ID: 133857
+STATUS: Còn hiệu lực
+EFFECTIVE_DATE: Quyết định 04/2019/QĐ-TTg
+SIGNED_DATE: N/A
+FILTER_YEAR: 2019
+==================================================
+

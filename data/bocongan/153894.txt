@@ -1,0 +1,9 @@
+SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=153894
+TITLE: Văn bản ID 153894
+ITEM_ID: 153894
+STATUS: Còn hiệu lực
+EFFECTIVE_DATE: 01/07/2018
+SIGNED_DATE: 15/05/2018
+FILTER_YEAR: 2018
+==================================================
+

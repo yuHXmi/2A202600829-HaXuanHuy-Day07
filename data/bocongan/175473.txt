@@ -1,0 +1,54 @@
+SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=175473
+TITLE: Văn bản ID 175473
+ITEM_ID: 175473
+STATUS: Còn hiệu lực
+EFFECTIVE_DATE: 10/08/2025
+SIGNED_DATE: 05/02/2025
+FILTER_YEAR: 2025
+==================================================
+
+THÔNG TƯ
+Ban hành Quy chuẩn kỹ thuật quốc gia về cấu trúc thông điệp dữ liệu
+trao đổi với Cơ sở dữ liệu tổng hợp quốc gia
+Căn cứ Luật Tiêu chuẩn và Quy chuẩn kỹ thuật ngày 29 tháng 06 năm 2006;
+Căn cứ Luật sửa đổi, bổ sung một số điều của 37 Luật có liên quan đến quy hoạch ngày 20 tháng 11 năm 2018;
+Căn cứ
+Luật Công an nhân dân ngày 20 tháng 11 năm 2018
+;
+Căn cứ Luật sửa đổi, bổ sung một số điều của Luật Công an nhân dân ngày 22 tháng 6 năm 2023;
+Căn cứ Nghị định số
+127/2007/NĐ-CP
+ngày
+01 tháng 8 năm 2007 của Chính phủ quy định chi tiết thi hành một số điều của
+Luật Tiêu chuẩn và quy chuẩn kỹ thuật
+;
+Căn cứ Nghị định số
+78/2018/NĐ-CP
+ngày
+16 tháng 5 năm 2018 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số
+127/2007/NĐ-CP
+ngày
+01 tháng 8 năm 2007 của Chính phủ quy định chi tiết thi hành một số điều của
+Luật Tiêu chuẩn và quy chuẩn kỹ thuật
+;
+Căn cứ Nghị định số
+01/2018/NĐ-CP
+ngày 06 tháng 8 năm 2018 của Chính phủ quy định chức năng nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;
+Căn cứ Nghị định số
+05/2024/NĐ-CP
+ngày 11 tháng 11 năm 2024 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số
+01/2018/NĐ-CP
+ngày 06 tháng 8 năm 2018 của Chính phủ quy định chức năng nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;
+Theo đề nghị của Cục trưởng Cục Cảnh sát quản lý hành chính về trật tự xã hội;
+Bộ trưởng Bộ Công an ban hành Thông tư ban hành Quy chuẩn kỹ thuật quốc gia về cấu trúc thông điệp dữ liệu trao đổi với Cơ sở dữ liệu tổng hợp quốc gia.
+Điều
+1.
+Ban hành kèm theo Thông tư này Quy chuẩn kỹ thuật quốc gia về cấu trúc thông điệp dữ liệu trao đổi với Cơ sở dữ liệu tổng hợp quốc gia - QCVN 09:2025/BCA.
+Điều
+2. Hiệu lực thi hành
+Thông tư này có hiệu lực thi hành kể từ ngày 10 tháng 8 năm 2025.
+Điều
+3. Tổ chức thực hiện
+1. Cục trưởng Cục Cảnh sát quản lý hành chính về trật tự xã hội có trách nhiệm theo dõi, kiểm tra, đôn đốc việc thực hiện Thông tư này.
+2. Thủ trưởng đơn vị trực thuộc cơ quan Bộ, Giám đốc Công an các tỉnh, thành phố trực thuộc trung ương và các cơ quan, tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Thông tư này.
+Trong quá trình thực hiện, nếu có vướng mắc phát sinh, Công an các đơn vị địa phương, các cơ quan, tổ chức, cá nhân liên quan báo cáo về Bộ Công an (qua Cục Cảnh sát quản lý hành chính về trật tự xã hội) để được hướng dẫn kịp thời./.

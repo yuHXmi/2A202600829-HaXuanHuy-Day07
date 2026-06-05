@@ -1,0 +1,9 @@
+SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=24773
+TITLE: Văn bản ID 24773
+ITEM_ID: 24773
+STATUS: Hết hiệu lực toàn bộ
+EFFECTIVE_DATE: Ngày hết hiệu lực:07/09/2015
+SIGNED_DATE: 13/09/2002
+FILTER_YEAR: 2015
+==================================================
+

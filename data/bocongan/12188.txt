@@ -1,0 +1,9 @@
+SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=12188
+TITLE: Văn bản ID 12188
+ITEM_ID: 12188
+STATUS: Còn hiệu lực
+EFFECTIVE_DATE: 25/05/2009
+SIGNED_DATE: 10/04/2009
+FILTER_YEAR: 2009
+==================================================
+

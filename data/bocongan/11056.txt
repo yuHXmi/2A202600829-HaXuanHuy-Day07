@@ -1,0 +1,19 @@
+SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=11056
+TITLE: Văn bản ID 11056
+ITEM_ID: 11056
+STATUS: Còn hiệu lực
+EFFECTIVE_DATE: 12/12/1992
+SIGNED_DATE: 12/12/1992
+FILTER_YEAR: 1992
+==================================================
+
+QUYẾT ĐỊNH
+Ban hành ba tiêu chuẩn Việt Nam
+BỘ TRƯỞNG BỘ KHOA HỌC - CÔNG NGHỆ VÀ MÔI TRƯỜNG
+Căn cứ Pháp lệnh chất lượng hàng hoá ngày 27-12-1990;
+Xét đề nghị của Tổng cục Tiêu chuẩn Đo lường Chất lượng,
+QUYẾT ĐỊNH:
+Nay ban hành 3 (ba) tiêu chuẩn Việt Nam sau đây:
+TCVN 4380-1992 Tôm thịt đông lạnh - Yêu cầu kỹ thuật. - thay thế TCVN/4380-86;
+TCVN 4381-1992 Tôm vỏ đông lạnh - Yêu cầu kỹ thuật. - thay thế TCVN/4381-86;
+TCVN 5289-1992 Tôm mực đông lạnh - Yêu cầu vi sinh. thay thế TCVN/5289-90./.
