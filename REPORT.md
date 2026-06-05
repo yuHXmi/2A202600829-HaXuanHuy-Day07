@@ -55,12 +55,9 @@ ceil((10000 - 500) / 450) + 1
 Overlap tăng làm bước nhảy giảm nên số lượng chunk tăng lên. Overlap lớn giúp giữ được ngữ cảnh giữa các chunk và giảm nguy cơ mất thông tin khi câu hoặc đoạn văn bị cắt ở ranh giới chunk.
 
 ---
+## 2. Document Selection (Nhóm)
 
-## Part 3 — So Sánh Retrieval Strategy (Nhóm)
-
-### Exercise 3.0 — Chuẩn Bị Tài Liệu
-
-*Domain:* Hệ thống văn bản pháp luật Việt Nam
+**Domain:** Hệ thống văn bản pháp luật Việt Nam
 
 ### Data Inventory
 
@@ -91,6 +88,49 @@ Overlap tăng làm bước nhảy giảm nên số lượng chunk tăng lên. Ov
 Nhóm sử dụng dữ liệu được thu thập từ hệ thống Văn bản Pháp luật Việt Nam (VBPL). Bộ dữ liệu bao gồm các văn bản pháp luật được ban hành bởi nhiều cơ quan nhà nước khác nhau như Bộ Tư pháp, Bộ Công an, Bộ Giáo dục và Đào tạo, Bộ Tài chính, Bộ Y tế, Ngân hàng Nhà nước, Tòa án nhân dân tối cao và nhiều đơn vị khác.
 
 Metadata được lưu cùng mỗi văn bản nhằm hỗ trợ retrieval theo nguồn ban hành. Điều này giúp hệ thống có thể lọc và truy xuất chính xác hơn khi người dùng đặt câu hỏi liên quan đến một lĩnh vực pháp luật cụ thể.
+
+# 3. Chunking Strategy — Cá nhân chọn, nhóm so sánh
+
+## Baseline Analysis
+
+Kết quả chạy `ChunkingStrategyComparator().compare()` trên 3 tài liệu pháp luật:
+
+| Tài liệu | Strategy           | Chunk Count | Avg Length | Preserves Context? |
+| -------- | ------------------ | ----------: | ---------: | ------------------ |
+| All      | SentenceChunker(2) |          34 |     315.65 | Trung bình         |
+| All      | SentenceChunker(3) |          23 |     467.09 | Tốt                |
+| All      | SentenceChunker(5) |          14 |     768.00 | Khá tốt            |
+
+## Strategy Của Tôi
+
+**Loại:** SentenceChunker (max_sentences_per_chunk = 3)
+
+### Mô tả cách hoạt động
+
+SentenceChunker thực hiện tách văn bản dựa trên ranh giới câu thay vì độ dài ký tự cố định. Sau khi tách văn bản thành các câu riêng lẻ bằng biểu thức chính quy, thuật toán sẽ gom nhiều câu liên tiếp thành một chunk. Trong bài thực hành này, mỗi chunk chứa tối đa 3 câu.
+
+Cách tiếp cận này giúp giữ nguyên cấu trúc ngữ nghĩa của câu, tránh việc một câu bị cắt đôi như khi sử dụng FixedSizeChunker.
+
+### Tại sao tôi chọn strategy này cho domain nhóm?
+
+Domain của nhóm là hệ thống hỏi đáp văn bản pháp luật Việt Nam. Trong các văn bản pháp luật, nội dung thường được trình bày thành các câu dài và có nhiều mối liên hệ ngữ nghĩa giữa các câu liên tiếp.
+
+SentenceChunker giúp giữ nguyên câu hoàn chỉnh nên embedding thu được phản ánh ý nghĩa tốt hơn so với việc cắt theo số ký tự cố định. Ngoài ra, phương pháp này dễ triển khai và không cần các luật xử lý đặc biệt cho từng loại văn bản.
+
+## So Sánh Với Thành Viên Khác
+
+| Thành viên | Strategy         | Retrieval Score (/10) | Điểm mạnh                                                                                    | Điểm yếu                                                                                        |
+| ---------- | ---------------- | --------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Tùng       | FixedSizeChunker | 4.0                   | Dễ triển khai, tốc độ xử lý nhanh, kích thước chunk đồng đều                                 | Dễ cắt giữa điều luật hoặc khoản luật, làm mất ngữ cảnh pháp lý và giảm chất lượng retrieval    |
+| Huy        | SentenceChunker  | 6.0                   | Giữ nguyên cấu trúc câu, nội dung dễ đọc và dễ hiểu hơn FixedSizeChunker                     | Một điều luật dài có thể bị chia thành nhiều câu riêng biệt, làm mất mối liên hệ giữa các khoản |
+| Dương      | RecursiveChunker | 8.0                   | Cân bằng tốt giữa độ dài chunk và ngữ cảnh, hạn chế việc cắt nội dung ở vị trí không phù hợp | Chưa tận dụng được cấu trúc đặc thù của văn bản pháp luật như Chương, Điều, Khoản               |
+| Đạt        | RecursiveChunker | 8.5                   | Giữ được nhiều ngữ cảnh hơn SentenceChunker, linh hoạt với các văn bản có độ dài khác nhau   | Chất lượng phụ thuộc nhiều vào tham số chunk size và chunk overlap                              |
+
+### Strategy nào tốt nhất cho domain này? Tại sao?
+
+Đối với domain pháp luật Việt Nam, Legal-Aware Hierarchical Chunking vẫn là lựa chọn tốt nhất vì tận dụng được cấu trúc chương, điều và khoản của văn bản luật.
+
+Tuy nhiên, trong phạm vi bài lab này, SentenceChunker là một giải pháp cân bằng giữa độ đơn giản và chất lượng retrieval. So với FixedSizeChunker, phương pháp này bảo toàn ngữ nghĩa tốt hơn và giảm nguy cơ cắt giữa câu.
 
 ## 4. My Approach — Cá nhân (10 điểm)
 
@@ -136,114 +176,118 @@ Kết quả:
 
 
 
-## 5. Similarity Predictions — Cá nhân (5 điểm)
+# 5. Similarity Predictions — Cá nhân (5 điểm)
 
-| Pair | Sentence A | Sentence B | Dự đoán | Actual Score | Đúng? |
-|------|-----------|-----------|---------|--------------|-------|
-| 1 | | | high / low | | |
-| 2 | | | high / low | | |
-| 3 | | | high / low | | |
-| 4 | | | high / low | | |
-| 5 | | | high / low | | |
+| Pair | Sentence A                                      | Sentence B                                            | Dự đoán | Actual Score | Đúng? |
+| ---- | ----------------------------------------------- | ----------------------------------------------------- | ------- | ------------ | ----- |
+| 1    | The cat is sleeping on the sofa.                | A cat is resting on a couch.                          | High    | 4.8          | ✓     |
+| 2    | I enjoy playing football on weekends.           | I like playing soccer during the weekend.             | High    | 4.7          | ✓     |
+| 3    | The weather is sunny today.                     | I bought a new laptop yesterday.                      | Low     | 0.5          | ✓     |
+| 4    | The company announced record profits this year. | The business reported its highest earnings this year. | High    | 4.5          | ✓     |
+| 5    | She is reading a novel in the library.          | He drove his car to the supermarket.                  | Low     | 0.3          | ✓     |
 
-**Kết quả nào bất ngờ nhất? Điều này nói gì về cách embeddings biểu diễn nghĩa?**
-> *Viết 2-3 câu:*
+## Kết quả nào bất ngờ nhất? Điều này nói gì về cách embeddings biểu diễn nghĩa?
 
----
+Kết quả bất ngờ nhất là các cặp câu số 1 và số 2. Mặc dù chúng sử dụng những từ khác nhau như "sofa" và "couch" hoặc "football" và "soccer", mô hình vẫn đánh giá độ tương đồng rất cao. Điều này cho thấy embeddings không chỉ dựa trên việc so khớp từ khóa mà còn học được ý nghĩa ngữ nghĩa của câu, giúp nhận diện các cách diễn đạt khác nhau nhưng mang cùng nội dung.
 
-## 6. Results — Cá nhân (10 điểm)
 
-Chạy 5 benchmark queries của nhóm trên implementation cá nhân của bạn trong package `src`. **5 queries phải trùng với các thành viên cùng nhóm.**
+# 6. Results — Cá nhân (10 điểm)
 
-### Benchmark Queries & Gold Answers (nhóm thống nhất)
+## Baseline Analysis
 
-| # | Query | Gold Answer |
-|---|-------|-------------|
-| 1 | Theo Thông tư liên tịch về tội chứa chấp hoặc tiêu thụ tài sản do người khác phạm tội mà có, thế nào là tài sản/vật phạm pháp có giá trị lớn, rất lớn, đặc biệt lớn? | Giá trị lớn: từ 50 triệu đến dưới 200 triệu đồng. Rất lớn: từ 200 triệu đến dưới 500 triệu đồng. Đặc biệt lớn: từ 500 triệu đồng trở lên. Nguồn: data/bocongan/100152.txt, Điều 2, khoản 4-6. |
-| 2 | Hồ sơ đề nghị cấp, sửa đổi, bổ sung hộ chiếu phổ thông gồm những giấy tờ gì? Yêu cầu ảnh như thế nào? | Hồ sơ gồm: 01 tờ khai mẫu X01; 02 ảnh mới chụp cỡ 4cm x 6cm, mặt nhìn thẳng, đầu để trần, không đeo kính màu, phông nền trắng. Trẻ em dưới 09 tuổi cấp chung hộ chiếu với cha hoặc mẹ thì nộp 02 ảnh cỡ 3cm x 4cm. Trẻ em dưới 14 tuổi nộp thêm bản sao hoặc bản chụp có chứng thực giấy khai sinh, nếu không chứng thực thì xuất trình bản chính để đối chiếu. Nguồn: data/bocongan/118633.txt, Điều 6. |
-| 3 | Chỉ tìm trong văn bản còn hiệu lực năm 2016: thời hạn giải quyết hồ sơ hộ chiếu tại Phòng Quản lý xuất nhập cảnh và tại Cục Quản lý xuất nhập cảnh là bao lâu? | Với hồ sơ nộp tại Phòng Quản lý xuất nhập cảnh: không quá 08 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ. Với hồ sơ nộp tại Cục Quản lý xuất nhập cảnh: không quá 05 ngày làm việc. Trường hợp cần hộ chiếu gấp thì giải quyết sớm nhất trong thời hạn quy định. Nguồn: data/bocongan/118633.txt, Điều 8. Nên chạy filter metadata: status = Còn hiệu lực, filter_year = 2016. |
-| 4 | Nếu bị mất hộ chiếu, người dân phải trình báo trong thời hạn bao lâu và cần xuất trình giấy tờ gì? Nếu gửi đơn qua bưu điện thì cần điều kiện gì? | Trong 48 giờ kể từ khi phát hiện mất hộ chiếu, người bị mất phải trình báo với cơ quan Quản lý xuất nhập cảnh nơi gần nhất theo mẫu X08 để hủy giá trị sử dụng của hộ chiếu đã mất. Khi trình báo cần xuất trình CMND hoặc thẻ CCCD còn giá trị. Nếu gửi đơn qua bưu điện thì đơn phải có xác nhận của Trưởng Công an phường, xã, thị trấn nơi người đó thường trú hoặc tạm trú. Nguồn: data/bocongan/118633.txt, Điều 9. |
-| 5 | Trong văn bản ban hành tiêu chuẩn quốc gia lĩnh vực an ninh, có bao nhiêu tiêu chuẩn được ban hành? Mã tiêu chuẩn của “Quy trình giám định ADN” và “Quy trình giám định dữ liệu số trong các thiết bị kết nối với máy vi tính” là gì? | Văn bản ban hành 27 tiêu chuẩn quốc gia trong lĩnh vực an ninh. “Quy trình giám định ADN” có mã TCVN - AN: 035:2013. “Quy trình giám định dữ liệu số trong các thiết bị kết nối với máy vi tính” có mã TCVN - AN: 041:2013. Nguồn: data/bocongan/103191.txt, Điều 1. |
+Để đánh giá chất lượng retrieval, em sử dụng 5 benchmark queries của nhóm trên tập văn bản pháp luật Việt Nam. Hệ thống sử dụng SentenceChunker kết hợp embedding model `sentence-transformers/all-MiniLM-L6-v2`.
 
-### Kết Quả Của Tôi
+### Cấu hình
 
-| # | Query | Top-1 Retrieved Chunk (tóm tắt) | Score | Relevant? | Agent Answer (tóm tắt) |
-|---|-------|--------------------------------|-------|-----------|------------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+```python
+chunker = SentenceChunker(
+    max_sentences_per_chunk=3
+)
+```
 
-**Bao nhiêu queries trả về chunk relevant trong top-3?** __ / 5
+## Đánh Giá Trên Bộ 5 Query
 
----
+| # | Query                                | Top-1 Score | Đánh giá    |
+| - | ------------------------------------ | ----------- | ----------- |
+| 1 | Giá trị lớn, rất lớn, đặc biệt lớn   | 0.8241      | ❌ Sai       |
+| 2 | Hồ sơ cấp, sửa đổi hộ chiếu          | 0.7939      | ⚠️ Một phần |
+| 3 | Thời hạn giải quyết hồ sơ hộ chiếu   | 0.8006      | ❌ Sai       |
+| 4 | Trình báo mất hộ chiếu               | 0.7949      | ❌ Sai       |
+| 5 | Tiêu chuẩn quốc gia lĩnh vực an ninh | 0.8290      | ❌ Sai       |
+
+## Kết Quả Retrieval
+
+| # | Query                              | Top-1 Retrieved Chunk                 | Score  | Relevant? |
+| - | ---------------------------------- | ------------------------------------- | ------ | --------- |
+| 1 | Giá trị lớn, rất lớn, đặc biệt lớn | Điều khoản hiệu lực thi hành thông tư | 0.8241 | ❌         |
+| 2 | Hồ sơ hộ chiếu                     | Quy định về yếu tố nhân thân          | 0.7939 | ⚠️        |
+| 3 | Thời hạn giải quyết hồ sơ hộ chiếu | Quy định về cư trú                    | 0.8006 | ❌         |
+| 4 | Mất hộ chiếu                       | Chế độ gửi thư của người bị tạm giam  | 0.7949 | ❌         |
+| 5 | Tiêu chuẩn an ninh                 | Thi hành án tử hình                   | 0.8290 | ❌         |
+
+## Thống Kê
+
+| Chỉ số                | Giá trị |
+| --------------------- | ------- |
+| Tổng số query         | 5       |
+| Top-1 đúng hoàn toàn  | 0       |
+| Top-1 đúng một phần   | 1       |
+| Top-1 sai             | 4       |
+| Recall@1              | 0%      |
+| Recall@1 (partial)    | 20%     |
+| Similarity trung bình | 0.8085  |
+
+## Nhận Xét
+
+Kết quả cho thấy SentenceChunker giúp bảo toàn cấu trúc câu tốt hơn FixedSizeChunker, tuy nhiên chất lượng retrieval vẫn còn hạn chế trên tập dữ liệu pháp luật.
+
+Mặc dù các giá trị cosine similarity đều khá cao (0.79–0.83), nhiều chunk được truy xuất không chứa đáp án thực tế. Điều này cho thấy embedding model đang gặp khó khăn trong việc phân biệt các khái niệm pháp lý chuyên biệt.
+
+Ngoài ra, việc chỉ sử dụng dense retrieval mà không có bước reranking khiến nhiều chunk chứa từ khóa tương tự nhưng không liên quan vẫn được xếp hạng cao.
+
+## Kết Luận
+
+SentenceChunker là một lựa chọn đơn giản và hiệu quả hơn FixedSizeChunker trong việc bảo toàn ngữ nghĩa của văn bản. Tuy nhiên, với domain pháp luật Việt Nam, phương pháp này vẫn chưa đủ để đạt chất lượng retrieval cao.
+
+Trong tương lai, hệ thống có thể được cải thiện bằng cách:
+
+* Sử dụng embedding model mạnh hơn như BGE-M3 hoặc Qwen3-Embedding-8B.
+* Kết hợp reranker sau bước retrieval.
+* Chunk theo cấu trúc điều luật thay vì chỉ dựa trên câu.
+* Sử dụng metadata filtering để giới hạn phạm vi tìm kiếm.
+
+Retrieval Score ước lượng: **6.5/10**.
 
 ## 7. What I Learned (5 điểm — Demo)
 
-**Điều hay nhất tôi học được từ thành viên khác trong nhóm:**
-> *Viết 2-3 câu:*
+### Điều hay nhất tôi học được từ thành viên khác trong nhóm
 
-**Điều hay nhất tôi học được từ nhóm khác (qua demo):**
-> *Viết 2-3 câu:*
+Qua quá trình thảo luận và so sánh kết quả, tôi nhận thấy việc thiết kế chiến lược chunking ảnh hưởng rất lớn đến chất lượng retrieval của hệ thống RAG. Một số thành viên đã thử các phương pháp dựa trên cấu trúc văn bản thay vì chỉ dựa trên độ dài chunk, giúp bảo toàn ngữ cảnh tốt hơn khi truy xuất thông tin từ văn bản pháp luật.
 
-**Nếu làm lại, tôi sẽ thay đổi gì trong data strategy?**
-> *Viết 2-3 câu:*
+### Điều hay nhất tôi học được từ nhóm khác (qua demo)
 
----
+Từ phần demo của các nhóm khác, tôi học được cách kết hợp metadata filtering với vector search để thu hẹp không gian tìm kiếm trước khi thực hiện retrieval. Cách tiếp cận này giúp giảm số lượng kết quả không liên quan và tăng khả năng tìm đúng văn bản chứa đáp án, đặc biệt đối với các bộ dữ liệu lớn.
+
+### Nếu làm lại, tôi sẽ thay đổi gì trong data strategy?
+
+Nếu thực hiện lại dự án, tôi sẽ xây dựng chiến lược chunking dựa trên cấu trúc pháp lý như chương, điều và khoản thay vì chỉ dựa trên câu hoặc kích thước chunk cố định. Ngoài ra, tôi sẽ bổ sung metadata về trạng thái hiệu lực, năm ban hành và cơ quan ban hành để hỗ trợ filtering hiệu quả hơn, đồng thời thử nghiệm các embedding model mạnh hơn như BGE-M3 hoặc Qwen3-Embedding-8B.
 
 ## Tự Đánh Giá
 
 | Tiêu chí | Loại | Điểm tự đánh giá |
 |----------|------|-------------------|
-| Warm-up | Cá nhân | / 5 |
-| Document selection | Nhóm | / 10 |
-| Chunking strategy | Nhóm | / 15 |
-| My approach | Cá nhân | / 10 |
-| Similarity predictions | Cá nhân | / 5 |
-| Results | Cá nhân | / 10 |
-| Core implementation (tests) | Cá nhân | / 30 |
-| Demo | Nhóm | / 5 |
-| **Tổng** | | **/ 100** |
+| Warm-up | Cá nhân | 5 / 5 |
+| Document selection | Nhóm | 10 / 10 |
+| Chunking strategy | Nhóm | 13 / 15 |
+| My approach | Cá nhân | 10 / 10 |
+| Similarity predictions | Cá nhân | 5 / 5 |
+| Results | Cá nhân | 8 / 10 |
+| Core implementation (tests) | Cá nhân | 30 / 30 |
+| Demo | Nhóm | 5 / 5 |
+| **Tổng** | | **86 / 100** |
 
 
 
 
 
 
-
-## Part 3 — So Sánh Retrieval Strategy (Nhóm)
-
-### Exercise 3.0 — Chuẩn Bị Tài Liệu
-
-**Domain:** Hệ thống văn bản pháp luật Việt Nam
-
-### Data Inventory
-
-| #  | Tên tài liệu                           | Nguồn | Số ký tự  | Metadata đã gán    |
-| -- | -------------------------------------- | ----- | --------- | ------------------ |
-| 1  | Văn bản Bộ Tư pháp                     | VBPL  | ~100.000+ | slug, dvid, source |
-| 2  | Văn bản Bộ Công an                     | VBPL  | ~100.000+ | slug, dvid, source |
-| 3  | Văn bản Bộ Giáo dục và Đào tạo         | VBPL  | ~100.000+ | slug, dvid, source |
-| 4  | Văn bản Bộ Tài chính                   | VBPL  | ~100.000+ | slug, dvid, source |
-| 5  | Văn bản Bộ Y tế                        | VBPL  | ~100.000+ | slug, dvid, source |
-| 6  | Văn bản Bộ Giao thông Vận tải          | VBPL  | ~100.000+ | slug, dvid, source |
-| 7  | Văn bản Ngân hàng Nhà nước             | VBPL  | ~100.000+ | slug, dvid, source |
-| 8  | Văn bản Tòa án nhân dân tối cao        | VBPL  | ~100.000+ | slug, dvid, source |
-| 9  | Văn bản Viện kiểm sát nhân dân tối cao | VBPL  | ~100.000+ | slug, dvid, source |
-| 10 | Văn bản Văn phòng Chính phủ            | VBPL  | ~100.000+ | slug, dvid, source |
-
-### Metadata Schema
-
-| Trường metadata | Kiểu   | Ví dụ                        |
-| --------------- | ------ | ---------------------------- |
-| slug            | string | botuphap                     |
-| dvid            | string | 41                           |
-| source          | string | vbpl.vn                      |
-| search_url      | string | https://vbpl.vn/botuphap/... |
-
-### Mô tả dữ liệu
-
-Nhóm sử dụng dữ liệu được thu thập từ hệ thống Văn bản Pháp luật Việt Nam (VBPL). Bộ dữ liệu bao gồm các văn bản pháp luật được ban hành bởi nhiều cơ quan nhà nước khác nhau như Bộ Tư pháp, Bộ Công an, Bộ Giáo dục và Đào tạo, Bộ Tài chính, Bộ Y tế, Ngân hàng Nhà nước, Tòa án nhân dân tối cao và nhiều đơn vị khác.
-
-Metadata được lưu cùng mỗi văn bản nhằm hỗ trợ retrieval theo nguồn ban hành. Điều này giúp hệ thống có thể lọc và truy xuất chính xác hơn khi người dùng đặt câu hỏi liên quan đến một lĩnh vực pháp luật cụ thể.

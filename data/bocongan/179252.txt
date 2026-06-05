@@ -1,9 +1,0 @@
-SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=179252
-TITLE: Văn bản ID 179252
-ITEM_ID: 179252
-STATUS: Còn hiệu lực
-EFFECTIVE_DATE: Luật 91/2025/QH15
-SIGNED_DATE: N/A
-FILTER_YEAR: 2025
-==================================================
-

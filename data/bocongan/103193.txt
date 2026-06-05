@@ -1,9 +1,0 @@
-SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=103193
-TITLE: Văn bản ID 103193
-ITEM_ID: 103193
-STATUS: Còn hiệu lực
-EFFECTIVE_DATE: 10/09/2014
-SIGNED_DATE: 23/07/2014
-FILTER_YEAR: 2014
-==================================================
-

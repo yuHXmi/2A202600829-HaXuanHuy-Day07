@@ -1,9 +1,0 @@
-SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=113088
-TITLE: Văn bản ID 113088
-ITEM_ID: 113088
-STATUS: Hết hiệu lực một phần
-EFFECTIVE_DATE: Nghị định 96/2016/NĐ-CP
-SIGNED_DATE: N/A
-FILTER_YEAR: 2016
-==================================================
-

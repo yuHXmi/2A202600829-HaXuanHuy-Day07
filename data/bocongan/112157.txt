@@ -1,9 +1,0 @@
-SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=112157
-TITLE: Văn bản ID 112157
-ITEM_ID: 112157
-STATUS: Còn hiệu lực
-EFFECTIVE_DATE: Nghị định 99/2016/NĐ-CP
-SIGNED_DATE: N/A
-FILTER_YEAR: 2016
-==================================================
-

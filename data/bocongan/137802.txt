@@ -1,9 +1,0 @@
-SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=137802
-TITLE: Văn bản ID 137802
-ITEM_ID: 137802
-STATUS: Còn hiệu lực
-EFFECTIVE_DATE: Nghị định 70/2019/NĐ-CP
-SIGNED_DATE: N/A
-FILTER_YEAR: 2019
-==================================================
-

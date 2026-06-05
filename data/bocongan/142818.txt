@@ -1,9 +1,0 @@
-SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=142818
-TITLE: Văn bản ID 142818
-ITEM_ID: 142818
-STATUS: Hết hiệu lực toàn bộ
-EFFECTIVE_DATE: Nghị định 60/2020/NĐ-CP
-SIGNED_DATE: N/A
-FILTER_YEAR: 2020
-==================================================
-

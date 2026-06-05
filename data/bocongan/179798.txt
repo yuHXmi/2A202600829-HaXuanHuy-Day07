@@ -1,9 +1,0 @@
-SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=179798
-TITLE: Văn bản ID 179798
-ITEM_ID: 179798
-STATUS: Hết hiệu lực toàn bộ
-EFFECTIVE_DATE: Nghị quyết 99/2019/QH14
-SIGNED_DATE: N/A
-FILTER_YEAR: 2019
-==================================================
-

@@ -1,9 +1,0 @@
-SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=141150
-TITLE: Văn bản ID 141150
-ITEM_ID: 141150
-STATUS: Hết hiệu lực toàn bộ
-EFFECTIVE_DATE: Nghị định 31/2020/NĐ-CP
-SIGNED_DATE: N/A
-FILTER_YEAR: 2020
-==================================================
-

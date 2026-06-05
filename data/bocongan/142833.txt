@@ -1,9 +1,0 @@
-SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=142833
-TITLE: Văn bản ID 142833
-ITEM_ID: 142833
-STATUS: Hết hiệu lực một phần
-EFFECTIVE_DATE: Nghị định 75/2020/NĐ-CP
-SIGNED_DATE: N/A
-FILTER_YEAR: 2020
-==================================================
-

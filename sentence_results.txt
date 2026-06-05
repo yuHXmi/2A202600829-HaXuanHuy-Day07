@@ -1,0 +1,125 @@
+Chunks stored: 26689
+
+
+============================================================
+QUERY: Theo Thông tư liên tịch về tội chứa chấp hoặc tiêu thụ tài sản do người khác phạm tội mà có, thế nào là tài sản/vật phạm pháp có giá trị lớn, rất lớn, đặc biệt lớn? 
+
+TOP 1
+Source: 67295.txt
+Cơ quan đăng ký khai sinh, đăng ký cư trú, cấp thẻ bảo hiểm y tế. 2. Cá nhân có yêu cầu thực hiện liên thông các thủ tục hành chính. 3. Các cơ quan, tổ chức, cá nhân có liên quan trong quá trình thực hiện liên thông các thủ tục hành chính.
+
+TOP 2
+Source: 39301.txt
+5. Tổng cục trưởng các Tổng cục, Thủ trưởng các đơn vị trực thuộc Bộ trưởng, Giám đốc Công an các tỉnh, thành phố trực thuộc Trung ương có trách nhiệm tổ chức thực hiện Thông tư này. Trong quá trình tổ chức thực hiện Thông tư này nếu có gì vướng mắc, Công an các đơn vị, địa phương báo cáo về Bộ Công an (qua Cục Xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc thuộc Tổng cục Xây dựng lực lượng Công an nhân dân) để được hướng dẫn kịp thời.
+
+TOP 3
+Source: 67338.txt
+Chương
+III
+SĨ QUAN THỰC HIỆN NHIỆM VỤ GIÁO DỤC QUỐC PHÒNG VÀ AN NINH
+Điều
+10. Sĩ quan chuyên trách công tác giáo dục quốc phòng và an ninh
+1. Sĩ quan Phòng Giáo dục quốc phòng và an ninh thuộc Cục Đào tạo, Tổng cục Chính trị Công an nhân dân có trách nhiệm tham mưu thực hiện các nhiệm vụ, quyền hạn theo quy định tại khoản 1 Điều 6 của Thông tư này. 2. Sĩ quan Phòng Tổ chức cán bộ Công an cấp tỉnh được phân công tham mưu thực hiện các nhiệm vụ giáo dục quốc phòng và an ninh theo quy định tại Điều
+
+
+============================================================
+QUERY: Hồ sơ đề nghị cấp, sửa đổi, bổ sung hộ chiếu phổ thông gồm những giấy tờ gì? Yêu cầu ảnh như thế nào?
+
+TOP 1
+Source: 148326.txt
+Điều
+6
+. Xác định mối quan hệ với chủ hộ và giải quyết một số trường hợp trong đăng ký cư trú
+1. Trường hợp người đăng ký cư trú chưa có thông tin trong Cơ sở dữ liệu về cư trú, Cơ sở dữ liệu quốc gia về dân cư khi đăng ký cư trú cơ quan đăng ký cư trú thực hiện thu thập, kiểm tra, xác minh, cập nhật thông tin dân cư theo quy định của pháp luật. 2. Trường hợp cơ quan đăng ký cư trú có sai sót khi thu thập, cập nhật thông tin vào Cơ sở dữ liệu về cư trú thì phải kiểm tra để điều chỉnh, bổ sung ch
+
+TOP 2
+Source: 179108.txt
+Cơ quan, tổ chức, cá nhân thực hiện khai thác thông tin trong Cơ sở dữ liệu tổng hợp quốc gia qua cổng thông tin điện tử, hệ thống thông tin giải quyết thủ tục hành chính theo hướng dẫn của bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ, Ủy ban nhân dân tỉnh, thành phố trực thuộc trung ương. 4. Khai thác bằng văn bản yêu cầu khai thác, cung cấp thông tin
+a) Cơ quan, tổ chức, cá nhân có văn bản yêu cầu khai thác, cung cấp thông tin trong Cơ sở dữ liệu tổng hợp quốc gia và gửi về Trung tâm dữ liệu 
+
+TOP 3
+Source: 187015.txt
+Cán bộ, chiến sĩ, lao động hợp đồng chết do tự sát, bị kỷ luật “tước danh hiệu Công an nhân dân” hoặc “buộc thôi việc”; cán bộ, chiến sĩ đã xuất ngũ, thôi việc, chuyển ngành; cán bộ Công an đã nghỉ hưu sau đó bị kết án một trong các tội được quy định trong Bộ Luật hình sự. 2. Thân nhân của cán bộ, chiến sĩ, lao động hợp đồng đang công tác, Trưởng, Phó trưởng công an xã, thị trấn và công an viên bán chuyên trách chết do tự sát hoặc bị truy cứu trách nhiệm hình sự. 3. Trường hợp đặc biệt do lãnh đ
+
+
+============================================================
+QUERY: Chỉ tìm trong văn bản còn hiệu lực năm 2016: thời hạn giải quyết hồ sơ hộ chiếu tại Phòng Quản lý xuất nhập cảnh và tại Cục Quản lý xuất nhập cảnh là bao lâu?
+
+TOP 1
+Source: 67673.txt
+Đoàn kết, thân ái, giúp đỡ nhau trong học tập và không cản trở việc học tập của học sinh khác. Điều
+6. Quy định về lao động, học nghề, văn hóa, văn nghệ, thể dục, thể thao, vui chơi, giải trí
+Học sinh trường giáo dưỡng phải:
+1. Tích cực, tự giác, chăm chỉ tham gia lao động, học nghề và các hoạt động văn hóa, văn nghệ, thể dục, thể thao, vui chơi, giải trí. 2.
+
+TOP 2
+Source: 135705.txt
+Bản cam kết của người bị kết án phạt tù về việc không vi phạm pháp luật, tiếp tục chấp hành nghĩa vụ trả lại tài sản, bồi thường thiệt hại, nghĩa vụ dân sự khác nếu chưa thi hành xong và chấp hành các hình phạt bổ sung khác (nếu có) theo mẫu của Hội đồng tư vấn đặc xá như: Cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định; cấm cư trú; quản chế; tước một số quyền công dân; tịch thu tài sản; trục xuất. 3. Đối với trường hợp người bị kết án phạt tù là người đã lập công lớn trong thờ
+
+TOP 3
+Source: 151242.txt
+Xử lý đối với mẫu vật được thu thập; tài liệu, đồ vật, phương tiện bị tạm giữ, tịch thu trong quá trình kiểm tra
+1. Mẫu vật môi trường, tài nguyên, an toàn thực phẩm được thu thập và kết quả đo kiểm môi trường tại hiện trường trong quá trình kiểm tra theo quy định tại Thông tư này được niêm phong phù hợp và chuyển đến cơ quan, đơn vị lưu giữ, kiểm định, giám định theo đúng quy định hiện hành để kiểm định, giám định, phục vụ kết luận kiểm tra và xử lý vi phạm pháp luật. 2. Trong quá trình kiểm tr
+
+
+============================================================
+QUERY: Nếu bị mất hộ chiếu, người dân phải trình báo trong thời hạn bao lâu và cần xuất trình giấy tờ gì? Nếu gửi đơn qua bưu điện thì cần điều kiện gì?
+
+TOP 1
+Source: 14395.txt
+SOURCE_URL: https://vbpl.vn/bocongan/Pages/vbpq-toanvan.aspx?ItemID=14395
+TITLE: Văn bản ID 14395
+ITEM_ID: 14395
+STATUS: Hết hiệu lực toàn bộ
+EFFECTIVE_DATE: 30/04/2007
+SIGNED_DATE: 26/03/2007
+FILTER_YEAR: 2007
+==================================================
+
+NGHỊ ĐỊNH
+Quy định cấp bậc hàm của sĩ quan, hạ sĩ quan
+trong lực lượng Công an nhân dân
+_______________
+CHÍNH PHỦ
+Căn cứ Luật Tổ chức Chính phủ ngày 25 tháng 12 năm 2001;
+Căn cứ Luật Công an nhân dân ngày 29 tháng 11 năm 2005;
+Xét đề ngh
+
+TOP 2
+Source: 96110.txt
+Học sinh được khen thưởng bằng hình thức cho về phép thăm gia đình khi có tiến bộ trong lao động, học tập, rèn luyện, đạt từ loại khá trở lên và đang còn bố, mẹ hoặc người thân (ông, bà, anh, chị, em ruột, người trực tiếp nuôi dưỡng). 4. Trường hợp trong thời gian thi hành quyết định tại cơ sở giáo dục bắt buộc mà trại viên có hành vi vi phạm, đã được giáo dục và kỷ luật nhiều lần đến khi hết thời hạn giáo dục tại cơ sở giáo dục bắt buộc vẫn không chịu sửa chữa thì thực hiện theo quy định tại kh
+
+TOP 3
+Source: 156833.txt
+Điều
+26. Điều khoản chuyển tiếp
+Các trường hợp tạm tuyển, tuyển chọn vào Công an nhân dân trước ngày Thông tư này có hiệu lực thi hành được tiếp tục thực hiện theo quy định tại Thông tư số
+30/2009/TT-BCA
+và Thông tư số
+35/2011/TT-BCA. Điều
+27. Trách nhiệm thi hành
+1. Thủ trưởng Công an đơn vị, địa phương có trách nhiệm tổ chức thực hiện Thông tư này.
+
+
+============================================================
+QUERY: Trong văn bản ban hành tiêu chuẩn quốc gia lĩnh vực an ninh, có bao nhiêu tiêu chuẩn được ban hành? Mã tiêu chuẩn của “Quy trình giám định ADN” và “Quy trình giám định dữ liệu số trong các thiết bị kết nối với máy vi tính” là gì?
+
+TOP 1
+Source: 180290.txt
+Quá trình thi hành nếu có khó khăn, vướng mắc, Công an các đơn vị, địa phương báo cáo về Bộ Công an (qua Cục Y tế) để kịp thời hướng dẫn, giải quyết./.
+
+TOP 2
+Source: 158184.txt
+4. Phiếu sức khỏe nghĩa vụ tham gia Công an nhân dân có giá trị khi:
+a) Ghi theo mẫu đúng quy định;
+b) Viết bằng bút mực hoặc bút bi, không được viết bằng bút chì;
+c) Chữ viết rõ ràng, không tẩy xóa, không viết tắt;
+d) Ghi đầy đủ các nội dung quy định trong phiếu sức khỏe nghĩa vụ tham gia Công an nhân dân;
+đ) Không quá 06 (sáu) tháng kể từ ngày Hội đồng khám sức khỏe có kết luận về tình trạng sức khỏe, trừ trường hợp có diễn biến đặc biệt về sức khỏe. Điều
+8. Kinh phí thực hiện
+1. Kinh phí đảm 
+
+TOP 3
+Source: 180268.txt
+Thành viên Hội đồng là Phó Cục trưởng phụ trách, đại diện lãnh đạo các đơn vị nghiệp vụ thuộc Cục Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ. Hội đồng kiểm tra có trách nhiệm xây dựng quy chế, xây dựng hệ thống đề kiểm tra và đáp án phù hợp với nội dung chương trình tập huấn nghiệp vụ, tổ chức kiểm tra và chấm điểm;
+d) Công khai kết quả kiểm tra và thông báo kết quả kiểm tra bằng văn bản trong thời hạn 05 ngày làm việc kể từ ngày có kết quả kiểm tra. 4. Công an cấp tỉnh có trách nhiệm rà 
